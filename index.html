@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simulacro primer parcial</title>
+</head>
+<body>
+    <div class="main_container">
+        <div class="container_tabla">
+        <div id="titulo">
+            <h1>Formulario de Datos</h1>
+            <h3>Tobias Moretti</h3>
+        </div>
+        <div id="fitros">
+            <h3 id="titulo_filtro" class="tituloInline">Filtrar por: </h3>
+            <select id="select_filtro" class="input_select">
+                <option value="todos">Todos</option>
+                <option value="aereos">Aereo</option>
+                <option value="terrestres">Terrestre</option>
+            </select>
+        </div>
+        <div id="calulo">
+            <h3 id="titulo_calculo" class="tituloInline"> Calcular Velocidad Maxima Promedio</h3>
+            <input type="text" id="textbox_calculo">
+            <button id="calcular_btn" class="button_style">Calcular</button>
+        </div>
+            <div id="selector_columnas">
+                <input type="checkbox" value="id" checked="true">
+                <label>ID</label>
+                <input type="checkbox" value="modelo" checked="true">
+                <label>Modelo</label>
+                <input type="checkbox" value="anoFab" checked="true">
+                <label>Ano Fabricado</label>
+                <input type="checkbox" value="velMax" checked="true">
+                <label>Velocidad Maxima</label>
+                <input type="checkbox" value="altMax" checked="true">
+                <label>Altura Maxima</label>
+                <input type="checkbox" value="autonomia" checked="true">
+                <label>Autonomia</label>
+                <input type="checkbox" value="cantPue" checked="true">
+                <label>Cantidad Puertas</label>
+                <input type="checkbox" value="CantRue" checked="true">        
+                <label>Cantidad Ruedas</label>
+            </div>
+            <div>
+                <table id="tabla">
+                </table>
+            </div>
+        </div>
+        <div class="container_formulario">
+            <h3 class="tituloInline" id="titulo_form"> Formulario ABM</h3>
+            <form id="formularioAlta">            
+                <label class="label_formulario">ID</label>
+                <input type="text" id="input_id" disabled="true">
+                <label class="label_formulario">Modelo:</label>
+                <input type="text" id="input_modelo">
+                <label class="label_formulario">Año Fabricado:</label>
+                <input type="text" id="input_anoFab">
+                <label class="label_formulario">Velocidad Maxima:</label>
+                <input type="text" id="input_velMax">
+                <label class="label_formulario">Tipo:</label>
+                <select id="select_tipo" class="input_select">
+                    <option value="terrestres">Terrestre</option>
+                    <option value="aereos">Aereo</option>
+                </select>  
+                <div class="input_alta_terrestre">          
+                    <label class="label_formulario">Cantidad Puertas:</label>
+                    <input type="text" id="input_cantPue">
+                    <label class="label_formulario">Cantidad Ruedas: </label>
+                    <input type="text" id="input_cantRue" >
+                </div> 
+                <div class="input_alta_aereo">
+                    <label class="label_formulario">Altura Maxima:</label>
+                    <input type="text" id="input_altMax">
+                    <label class="label_formulario">Autonomia:</label>
+                    <input type="text" id="input_autonomia">
+                </div>
+            </form>
+            <h2 id="mensaje_error"></h2>
+            <div class="container_botones">         
+                <button id="alta_btn" class="button_style">Alta</button>
+                <button id="modificar_btn" class="button_style">Modificar</button>
+                <button id="eliminar_btn" class="button_style">Eliminar</button>
+                <button id="cancelar_btn" class="button_style">Cancelar</button>
+            </div>
+        </div>
+    </div>    
+    <button id="agregar_btn" class="button_style"> Agregar </button>
+</body>
+<script src="App.js"></script>
+</html>
